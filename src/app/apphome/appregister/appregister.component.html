@@ -1,0 +1,193 @@
+<div class="nav d-flex " >
+
+    <div class="logo  d-flex">
+     
+    <img src="../../../assets/images/shopify.png" alt="Cart Image" >
+
+    <h3 style="margin-top:45px;  font-weight:bold; font-family: Arial, Helvetica, sans-serif; font-size:large; " >Shopify</h3>
+    </div>
+   
+
+  
+  <div class="nav_links" style="margin-left: 3%;" >
+    <ul>
+       <li class="item"><a href="#">Home</a></li>
+       <li class="item"><a href="#"> Services</a></li>
+       <li class="item"><a href="#">About Us</a></li>
+       <li class="item"><a href="#">Contact Us</a></li>
+
+     </ul>
+    </div>
+
+  
+ </div>
+
+ 
+ <section id="home">
+
+    <h2 style="text-decoration:underline ; font-family:Georgia, 'Times New Roman', Times, serif ;font-size: 60px;" >Black Friday</h2>
+    <br>
+    <h4 style="text-decoration:underline ; font-family:Georgia, 'Times New Roman', Times, serif ;font-size: 30px;">Buy Every Black coloured product <br><br>
+       <span>&nbsp;  &nbsp; &nbsp;30%  Flat off!!!!!!!!!!!! &nbsp; &nbsp;</span></h4>
+
+</section>
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class=" register_text">
+        <h3 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Register Yourself  !!!</h3>
+        <hr style="width:100% ">
+      <br>
+
+      <br> </div>
+
+
+
+    <div register_form_section>
+
+        <form [formGroup]="regForm" class="contact-form" (ngSubmit)="submit(); sendEmail($event)">  
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name"
+                [ngClass]="{'is-invalid':control.name.errors && issubmitted}">
+                <div style="color:red" *ngIf="control.name.errors?.required && issubmitted">Name is required</div>
+            
+            </div>
+
+            <div class="form-group">
+
+            <input type="text" name="message" [hidden]=true [(ngModel)]="random" formControlName="message">
+
+           </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" formControlName="email" name="email"
+                [ngClass] ="{'is-invalid':control.email.errors && issubmitted}">
+                <div style="color:red" *ngIf="control.email.errors?.required && issubmitted">
+                    Email is required
+                </div>
+                <div style="color:red" *ngIf="control.email.errors?.email && issubmitted">
+                    Enter email is Correct format
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Age<span style="color: lightgray;">(optional)</span></label>
+                <input type="text" class="form-control" formControlName="age">
+               
+            
+            </div>
+    
+            <div class="form-group">
+                <label>Contact</label>
+                <input type="text" class="form-control" formControlName="phoneNumber" 
+                [ngClass]="{'is-invalid':control.phoneNumber.errors && issubmitted}">
+                <div style="color:red" *ngIf="control.phoneNumber.errors?.required && issubmitted">
+                    PhoneNumber is required
+                </div>
+                <div style="color:red" *ngIf="control.phoneNumber.hasError('maxlength') && issubmitted">
+                    Please Enter Correct Phone Number
+                </div>
+                <div style="color:red" *ngIf="control.phoneNumber.hasError('minlength') && issubmitted">
+                    Please Enter Correct Phone Number
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="form-control" formControlName="address"
+                [ngClass]="{'is-invalid':control.name.errors && issubmitted}">
+                <div style="color:gray" *ngIf="control.name.errors?.required && issubmitted">Address is required</div>
+            
+            </div>
+            <div class="form-group">
+                <label>Pincode</label>
+                <input type="text" class="form-control" formControlName="pincode"
+                [ngClass]="{'is-invalid':control.pincode.errors && issubmitted}">
+                <div style="color:gray" *ngIf="control.name.errors?.required && issubmitted">Address is required</div>
+            
+            </div>
+          
+            <div class="form-group">
+                <label>Nationality<span style="color: lightgray;">(optional)</span></label>
+                <input type="text" class="form-control" formControlName="nationality">
+               
+            
+            </div>
+         
+           
+           <br>
+           <br>
+    
+            <div class="form-group">
+                <label>UserName</label>
+                <input type="text" class="form-control" formControlName="username"
+                [ngClass]="{'is-invalid':control.username.errors && issubmitted}">
+                <div style="color:red" *ngIf="control.username.errors?.required && issubmitted">Name is required</div>
+             
+    
+    
+               
+            
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password"
+              [ngClass]="{'is-invalid':control.username.errors && issubmitted}">
+              <div style="color:red" *ngIf="control.password.errors?.required && issubmitted">
+                Password is required
+            </div>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" formControlName="confirmPassword"
+              [ngClass]="{'is-invalid':control.username.errors && issubmitted}">
+              <div style="color:red" *ngIf="control.confirmPassword.errors?.required && issubmitted">
+                Password is required
+            </div>
+         <!---  <div style="color:red" *ngIf="control.confirmPassword.errors?.MustMatch && issubmitted">
+                Password and Confirm Password Does not match
+    
+            </div>
+        -->
+    
+          
+    
+            </div>
+    
+    
+            <br>
+            <br>
+    
+    
+            
+    
+               
+         
+            <br>
+            <br>
+    
+         
+            
+    
+    
+          
+    
+            
+            <br>
+            <button type="submit" class="btn btn-warning">Submit</button>
+            
+            
+            </form>
+    
+       
+
+    </div>
+    
+</div>

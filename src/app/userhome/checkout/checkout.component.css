@@ -1,0 +1,76 @@
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 90px;
+  }
+  
+  .logo {
+    margin: 3px 1px;
+    font-family: "Baloo Bhai 2";
+  }
+  
+  .logo img {
+    height: 81px;
+    margin: 26px 23px;
+    border-radius: 50%;
+  }
+  
+  .nav {
+    position: relative;
+  }
+  
+  .nav ul {
+    display: flex;
+    font-family: "Baloo Bhai 2";
+  }
+  
+  .nav::before {
+    content: "";
+    
+    background-image:linear-gradient(lightslategrey,white);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.2;
+  }
+  
+  .nav ul li {
+    list-style: none;
+    font-size: 1.3 rem;
+  }
+  .nav ul li a {
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav ul li a:hover {
+    display: block;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    background-color:#fc6b03;
+  }
+  .btn {
+    padding: 6px 20px;
+    border: none;
+    background-color: lightslategrey;
+    margin: 17px;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    font-family: "Bree Serif", serif;
+    cursor: pointer;
+  }
+  .sidebar {
+    text-align:center;
+    height:700px;
+    background-color:#fc6b03;
+    background-image:linear-gradient(lightslategrey,white)
+
+  }

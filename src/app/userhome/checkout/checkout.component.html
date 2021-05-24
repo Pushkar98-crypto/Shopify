@@ -1,0 +1,182 @@
+
+ 
+<div class="nav d-flex" >
+
+    <div class="logo  d-flex">
+     
+    <img src="../../../assets/images/shopify.png" alt="Cart Image" >
+
+    <h3 style="margin-top:45px">Shopify</h3>
+    </div>
+   
+
+  
+  <div class="nav_links"  >
+    <ul>
+       <li class="item"><a href="#">Home</a></li>
+       <li class="item"><a> Services</a></li>
+       <li class="item"><a>About Us</a></li>
+       <li class="item"><a>Contact Us</a></li>
+
+     </ul>
+    </div>
+
+
+  
+   </div>
+
+
+  
+ 
+ 
+
+ <div class="main_section">
+  <div class="container-fluid ">
+      <br>
+      <br>
+    
+      <br>
+
+      <div class="row">
+          <div class="col-9">
+              <br>
+              <h3 style="margin-left: 20px;">Cart Products</h3>
+              <br>
+            <div class="eachView d-flex m-3" *ngFor="let eachData of currentProductsData" >
+                      
+                <div style="background-color:lightsteelblue ; height: 430px; width:240px; border-radius: 9px;">
+                    <img style="height: 100%; border-radius: 9px;" width="100%" [src]="eachData.photo" > 
+           
+                   </div>
+                   <div class="row ">
+        
+                    <div class="col-7">
+                   <div class="homeDisplayData" style="background-color: antiquewhite; height: 430px; width:380px">
+                        <ul style="list-style: none;">
+                            <li><h1 style="font-weight: bold; ">{{eachData.Productname}}</h1></li>
+
+                            <li><h2>Price: {{eachData.Price}} INR</h2></li>
+                            <li><h2>{{eachData.Description}}</h2></li>
+
+                        
+                            <li><h3>Brand:{{eachData.brand}}</h3></li>
+                            <li><h3>Color:{{eachData.color}}</h3></li>
+          
+                            <li><button class="btn-danger" style="border:none;width:90px; border-radius:9px; height:50px;" (click)="deleting(this.eachData.id)">Delete</button></li>
+    
+                           
+                        </ul>
+
+                        <div class="cal_area d-flex justify-content-between align-items-center" >
+                        
+                          <form [formGroup]="unitForm">
+                        <label style="font-weight: bold;">Unit:</label>
+                        
+                        <input type="number" min="1" max="10"   formControlName="unit" id="quan" form (change)="valuechange(this.unitForm.value.unit,this.eachData)" />
+                              
+                      </form>
+                        <div class="price_display">
+                            <label style="font-weight: bold;">&nbsp;&nbsp; &nbsp;&nbsp;Sub Total</label>
+                            <button class="btn">{{eachData.dynamicprice}}INR</button>
+                        </div>
+                        </div>
+
+                      
+                        </div>
+                        </div>
+                       
+                  
+                  
+                   </div>
+            </div>
+        
+            
+          </div>
+          <div class="col-3 sidebar">
+  
+            <br>
+            <hr style="width:100%">
+            <br>
+            
+            <br>
+         
+        
+            <br>
+            <div class="options">
+                <!-- <label>
+                    <h1>Total Price</h1>
+                </label>
+                <button class="btn-success" style="width: 90%; height: 50px; border-radius:10px; border:none; color: black ;font-family: 'Times New Roman', Times, serif; font-weight:bold; ">{{totalPrice}}</button> -->
+
+                <br>
+                <br>
+                <br>
+                  <button class="btn" style="width: 90%;" (click)="checkingout()">Checkout</button>
+                  <button class="btn" style="width: 90%;" (click)="logout()")>Log Out</button>
+                <br>
+                <br>
+                <br>
+                <button class="btn" style="width: 90%;" *ngIf="isTotalVisible"> Total Amount:{{totalPrice}} INR</button>
+                 <form  [formGroup]="mailForm" class="contact-form" [hidden]=true (ngSubmit)="sendEmail($event)">
+                   <div class="form-control">
+                  <textarea name="message" [(ngModel)]="finalSendMessage" [hidden]=true formControlName="message"></textarea>
+                </div>
+                <div class="form-control">
+                  <input type="text" [hidden]=true [(ngModel)]="sendmail" name="email"  formControlName="email">
+                </div>
+                  <input type="submit"  [hidden]=true id="id1" value="send">
+                  </form> 
+
+                   <button class="btn" style="width: 90%;" (click)="logout()">Log Out</button>
+              
+            </div>
+
+
+          </div>
+      </div>
+  </div>
+</div>
+
+ 
+
+
+ <div class="info_area" style="background-image:linear-gradient(lightslategray,white)">
+    <div class="container info_area_con d-flex justify-content-evenly">
+         
+          <ul class="info_list" style="list-style-type: none;">
+              <li><img  style ="width: 80px; height: 80px;" src="../../../assets/images/shopify.png"></li>
+              <li>2600 Rose Hill St # 100<br>
+                Boise, ID 83705</li>
+                <br>
+                <li>P: (208) 345-1386</li>
+                    <li>E: office@yourshpify.com</li>
+          </ul>
+          <br>
+
+        
+          <p class="info_area_txt ser">
+            <span style="color:rgb(70, 67, 66) ;font-weight: bold">Social Media </span><br>
+                    <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Twitter</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Facebook</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Instagram</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;" >Snapchat</a><br>
+                  
+        </p>
+        <p class="info_area_txt lin">
+            <span style="font-weight: bold; color:rgb(70, 67, 66) ;">HELPFUL LINKS</span><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Home</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Contact us</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Custome Review</a><br>
+            <a href="#"  style="text-decoration: none; color:rgb(70, 67, 66) ;">Our Blog</a><br>
+           
+            <br>
+
+            
+        </p>
+          
+        
+    </div>
+</div>
+
+<!--  
+<app-final [hidden]=true finalSendMessage=this.mailForm.value.message></app-final> -->

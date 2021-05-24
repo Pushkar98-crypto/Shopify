@@ -1,0 +1,249 @@
+
+ 
+<div class="nav d-flex" >
+
+    <div class="logo  d-flex">
+     
+    <img src="../../../assets/images/shopify.png" alt="Cart Image" >
+
+    <h3 style="margin-top:45px">Shopify</h3>
+    </div>
+   
+
+  
+  <div class="nav_links"  >
+    <ul>
+       <li class="item"><a href="#">Home</a></li>
+       <li class="item"><a> Services</a></li>
+       <li class="item"><a>About Us</a></li>
+       <li class="item"><a>Contact Us</a></li>
+
+     </ul>
+    </div>
+<div class="right d-flex justify-content-between align-items-center">
+   <div class="srch_section  align-items-center " style="margin-left:5%;">
+    <form [formGroup]='searchForm' class="contact-form d-flex align-items-center" (ngSubmit)="searching()"   >
+       <input type="text" class="form-control " [(ngModel)]="srchInput"  style="height: 40px; width: 190px; border-radius: 5px; border:none" placeholder="search" formControlName="search">
+       <button  type="submit" class="btn"> Search</button>
+    </form>
+   </div>
+  
+
+   <div class="cart_area d-flex" style="margin-left: 70%;">
+    <p style="margin-left:10%;"><button mat-raised-button color = "primary"
+      matBadge ="{{this.numberofProductsInCart}} "matBadgePosition = "before" matBadgeColor = "accent" (click)="travelToCheckout()">
+      Cart
+   </button></p>
+   </div>
+
+   </div>
+
+
+  
+ </div>
+ <!-- <div class="products_nav d-flex" > 
+     <a>Electronics</a>
+     
+ </div> -->
+
+ <div class="main_section">
+     <div class="row">
+         <div class="col-3 col-sm-2 sidebar">
+             <br>
+            <hr style="width:100%">
+            <br>
+            
+            <br>
+           <h4 style="text-decoration: underline;">All Services</h4>
+        
+            <br>
+            <div class="options">
+                <button class="btn" style="width: 90%;" (click)="displayAll()">All Products</button>
+                <div class="dropdown show">
+                    <a class="btn dropdown-toggle"  style="width: 90%;"   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categories
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item cat" (click)="displayElectronics()" >Electronics</a>
+                      <a class="dropdown-item cat" (click)="displayCloths()">Clothing</a>
+                      <a class="dropdown-item cat" >Shoes & Accessories</a>
+                      <a class="dropdown-item cat" >HouseHold</a>
+                    
+
+                    </div>
+                  </div>
+
+                  <button class="btn" style="width: 90%;">About Us</button>
+                  <button class="btn" style="width: 90%;" (click)="logout()">Log Out</button>
+
+            </div>
+
+
+         </div>
+
+
+   
+
+         <br>
+         
+
+
+ <div class="col-9 col-sm-10 main_section" >
+  
+    <div class="container" >
+
+      <br>
+      <label>Sort Order &nbsp;</label>
+      <select [(ngModel)]="chosenmode" (change)="modo()">
+    
+        <option value="mod1">Low to High</option>
+        <option value="mod2">High to Low</option>
+      </select>
+      <br>
+      <br>
+          
+        <div class="view_area" [ngSwitch]="currentDisplay">
+
+         <div class="allProducts" *ngSwitchCase=" 'All' " class="d-flex justify-content-evenly flex-wrap">
+           <div *ngFor="let alldata of all">
+               <mat-card class="tp-card">
+                <mat-card-header>
+                  <img mat-card-image [src] = "alldata.photo" alt = "Product">
+              </mat-card-header>
+              <mat-card-title>{{alldata.Productname}} <br> {{alldata.Price}}INR</mat-card-title>
+              <hr style="width:100%">
+      <mat-card-subtitle>
+            {{alldata.color}}
+          
+            
+             
+      </mat-card-subtitle>
+      <button class="btn" mat-button (click)="addingToCart(this.alldata.id)">Add to cart</button>
+
+               </mat-card>
+           </div>
+         </div>
+
+         <div class="allProducts" *ngSwitchCase=" 'electronics' " class="d-flex justify-content-evenly flex-wrap">
+          <div *ngFor="let eledata of electronicsData,let i=index">
+            <mat-card class="tp-card">
+              <mat-card-header>
+                <img mat-card-image [src] = "eledata.photo" alt = "Product">
+            </mat-card-header>
+            <mat-card-title>{{eledata.Productname}} <br> {{eledata.Price}}INR</mat-card-title>
+            <hr style="width:100%">
+    <mat-card-subtitle>
+          {{eledata.color}}
+        
+          
+           
+    </mat-card-subtitle>
+    <button class="btn" mat-button  (click)="addingToCart(this.eledata.id)">Add to cart</button>
+
+             </mat-card>
+          </div>
+        </div>
+
+        <div class="allProducts" *ngSwitchCase=" 'clothing' " class="d-flex justify-content-evenly flex-wrap">
+          <div *ngFor="let val of clothingData,let i=index">
+            <mat-card class="tp-card">
+              <mat-card-header>
+                <img mat-card-image [src] = "val.photo" alt = "Product">
+            </mat-card-header>
+            <mat-card-title>{{val.Productname}} <br> {{val.Price}}INR</mat-card-title>
+            <hr style="width:100%">
+    <mat-card-subtitle>
+          {{val.color}}
+        
+          
+           
+    </mat-card-subtitle>
+    <button class="btn" mat-button  (click)="addingToCart(this.val.id)">Add to cart</button>
+
+             </mat-card>
+          </div>
+        </div>
+
+
+        <div class="allProducts" *ngSwitchCase=" 'searchResults' " class="d-flex justify-content-evenly flex-wrap">
+          <div *ngFor="let alldata of all | filter:srchInput">
+              <mat-card class="tp-card">
+               <mat-card-header>
+                 <img mat-card-image [src] = "alldata.photo" alt = "Product">
+             </mat-card-header>
+             <mat-card-title>{{alldata.Productname}} <br> {{alldata.Price}}INR</mat-card-title>
+             <hr style="width:100%">
+     <mat-card-subtitle>
+           {{alldata.color}}
+         
+           
+            
+     </mat-card-subtitle>
+     <button class="btn" mat-button  (click)="addingToCart(this.alldata.id)">Add to cart</button>
+
+              </mat-card>
+          </div>
+        </div>
+
+
+
+        </div>
+       
+     </div>
+           
+  </div>
+
+
+
+
+
+     </div>
+     
+
+
+
+ </div>
+
+ 
+
+
+ <div class="info_area" style="background-image:linear-gradient(lightslategray,white)">
+    <div class="container info_area_con d-flex justify-content-evenly">
+         
+          <ul class="info_list" style="list-style-type: none;">
+              <li><img  style ="width: 80px; height: 80px;" src="../../../assets/images/shopify.png"></li>
+              <li>2600 Rose Hill St # 100<br>
+                Boise, ID 83705</li>
+                <br>
+                <li>P: (208) 345-1386</li>
+                    <li>E: office@yourshpify.com</li>
+          </ul>
+          <br>
+
+        
+          <p class="info_area_txt ser">
+            <span style="color:rgb(70, 67, 66) ;font-weight: bold">Social Media </span><br>
+                    <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Twitter</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Facebook</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Instagram</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;" >Snapchat</a><br>
+                  
+        </p>
+        <p class="info_area_txt lin">
+            <span style="font-weight: bold; color:rgb(70, 67, 66) ;">HELPFUL LINKS</span><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Home</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Contact us</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Custome Review</a><br>
+            <a href="#"  style="text-decoration: none; color:rgb(70, 67, 66) ;">Our Blog</a><br>
+           
+            <br>
+
+            
+        </p>
+          
+        
+    </div>
+</div>
+
+ 

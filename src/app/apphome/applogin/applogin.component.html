@@ -1,0 +1,103 @@
+<div class="nav d-flex " >
+
+    <div class="logo  d-flex">
+     
+    <img src="../../../assets/images/shopify.png" alt="Cart Image" >
+
+    <h3 style="margin-top:45px;  font-family:Georgia, 'Times New Roman', Times, serif ;font-size: 25px;">Shopify</h3>
+    </div>
+   
+
+  
+  <div class="nav_links" style="margin-left: 3%;" >
+    <ul>
+       <li class="item"><a href="#">Home</a></li>
+       <li class="item"><a href="#"> Services</a></li>
+       <li class="item"><a href="#">About Us</a></li>
+       <li class="item"><a href="#">Contact Us</a></li>
+
+     </ul>
+    </div>
+
+  
+ </div>
+
+ 
+ <section id="home">
+
+    <h2 style="text-decoration:underline ; font-family:Georgia, 'Times New Roman', Times, serif ;font-size: 60px;">Black Friday</h2>
+    <br>
+    <h4 style="text-decoration:underline ; font-family:Georgia, 'Times New Roman', Times, serif ;font-size: 30px;" >Buy Every Black coloured product <br><br>
+       <span>&nbsp;  &nbsp; 30%  Flat off!!!!!!!!!!!!&nbsp; &nbsp;</span></h4>
+
+</section>
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class=" login_text">
+        <h3 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Login</h3>
+        <hr style="width:100% ">
+      <br>
+
+      <br> </div>
+    <div login_form_section>
+
+        <form [formGroup]='logForm' class="contact-form" (ngSubmit)="login()">  
+           
+        <div class="form-group">
+                <label>UserName</label>
+                <input type="text" class="form-control" formControlName="username"
+                [ngClass]="{'is-invalid':control.username.errors && issubmitted}">
+                <div style="color:red" *ngIf="control.username.errors?.required && issubmitted">username is required</div>
+       </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password"
+              [ngClass]="{'is-invalid':control.username.errors && issubmitted}">
+              <div style="color:red" *ngIf="control.password.errors?.required && issubmitted">
+                Password is required
+            </div>
+            </div>
+           
+            <br>
+            <br>
+            <button type="submit" class="btn btn-warning">Login</button>
+              <p style="font-family: Georgia, 'Times New Roman', Times, serif; color:gray ;font-weight: bold;">If logging-in for first time then Verify yourself </p>
+            <button type="button" class="btn btn-warning" (click)="toggle()">Show Verfication Form</button>
+
+
+            </form>
+    
+
+            <br>
+            <div class="ver" *ngIf="verifyToggle">
+            <form [formGroup]="verifyForm" >
+              <div class="form-group">
+                  <label>Code</label>
+                  <input type="text" class="form-control" formControlName="code" [(ngModel)]="code">
+      
+              </div>
+             <br>
+      
+              <button type="button" class="btn btn-success" (click)="verifying()" >Verify</button>
+          
+      
+         </form>
+           
+
+            </div>
+
+
+
+    </div>
+    
+</div>

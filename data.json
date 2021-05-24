@@ -1,0 +1,193 @@
+{
+  "users": [
+    {
+      "name": "Mark",
+      "email": "some@mail.com",
+      "phoneNumber": "9899689799",
+      "address": "HOUSE NO. B-16/1, KH NO. 70, BEHIND GOPAL NURSING HOME, JYOTI NAGAR",
+      "pincode": "110094",
+      "age": "22",
+      "nationality": "Indian",
+      "username": "Mar",
+      "password": "check",
+      "confirmPassword": "check",
+      "verified": false,
+      "cart": [],
+      "verificationCode": "",
+      "id": 3
+    },
+    {
+      "name": "Elon Musk",
+      "email": "musk@mail.com",
+      "phoneNumber": "9899687877",
+      "address": "HOUSE NO. B-16/1, KH NO. 70, BEHIND GOPAL NURSING HOME, JYOTI NAGAR",
+      "pincode": "110094",
+      "age": "34",
+      "nationality": "Indian",
+      "username": "musk",
+      "password": "mars",
+      "confirmPassword": "mars",
+      "verified": true,
+      "cart": [
+        2,
+        1
+      ],
+      "verificationCode": 39268,
+      "message": 39268,
+      "id": 4
+    },
+    {
+      "name": "Aman Yadav",
+      "message": 88079,
+      "email": "pushkar491998@gmail.com",
+      "phoneNumber": "7838279099",
+      "address": "A-419 D2  block",
+      "pincode": "121009",
+      "age": "22",
+      "nationality": "Indian",
+      "username": "Pushkar",
+      "password": "push",
+      "confirmPassword": "push",
+      "verified": true,
+      "cart": [
+        3,
+        5,
+        4
+      ],
+      "verificationCode": 88079,
+      "id": 5
+    },
+    {
+      "name": "random",
+      "message": 80041,
+      "email": "pushkar.12064@gnindia.dronacharya.info",
+      "phoneNumber": "9899999987",
+      "address": "A-419 D2  block",
+      "pincode": "121009",
+      "age": "99",
+      "nationality": "indian",
+      "username": "jo",
+      "password": "ker",
+      "confirmPassword": "ker",
+      "verified": false,
+      "cart": [],
+      "verificationCode": 80041,
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "Productname": "Iphone 12 pro",
+      "type": "eletronics",
+      "Price": 130000,
+      "photo": "https://www.91-img.com/gallery_images_uploads/e/d/ed5c062684de8f5ff3e0a83dc3faaf808698865b.JPG?tr=h-550,w-0,c-at_max",
+      "brand": "Appple",
+      "color": "black",
+      "Description": "It is iphone 12 pro from Apple, with Matte Black Finish",
+      "dynamicprice": 130000
+    },
+    {
+      "id": 2,
+      "Productname": "Samsung Fridge",
+      "type": "eletronics",
+      "Price": 23090,
+      "photo": "https://rukminim1.flixcart.com/image/832/832/kk1h5e80/refrigerator-new/c/d/j/rt28a3453s8-hl-3-2021-samsung-original-imafzhedepq6z5r8.jpeg?q=70",
+      "brand": "Samsung",
+      "color": "Silver",
+      "Description": "Samsung 253L Frost Free Double Door fridege 3 start",
+      "dynamicprice": 23090
+    },
+    {
+      "id": 3,
+      "Productname": "Philips Trimmer",
+      "type": "eletronics",
+      "Price": 1000,
+      "photo": "https://rukminim1.flixcart.com/image/612/612/k5txifk0/shaver/n/h/y/philips-one-blade-qp2525-original-imafjp8yhxzxphaw.jpeg?q=70",
+      "brand": "Philips",
+      "color": "Black,green",
+      "Description": "PHILIPS OneBlade QP2525/10 Runtime: 45 min Trimmer for Men",
+      "dynamicprice": 1000
+    },
+    {
+      "id": 4,
+      "Productname": "Realme TV(Televison)",
+      "type": "eletronics",
+      "Price": 30000,
+      "photo": "https://rukminim1.flixcart.com/image/832/832/kae95e80/television/f/6/y/realme-tv-32-original-imafrz79pweqeafh.jpeg?q=70",
+      "brand": "Realme",
+      "color": "Black",
+      "Description": "realme 80 cm (32 inch) HD Ready LED Smart Android TV  (TV 32)",
+      "dynamicprice": 3000
+    },
+    {
+      "id": 5,
+      "Productname": "Lenvovo Ideapad S340",
+      "type": "eletronics",
+      "Price": 65000,
+      "photo": "https://rukminim1.flixcart.com/image/832/832/kfcv6vk0/computer/2/r/r/lenovo-original-imafvu6qxdd77hzc.jpeg?q=70",
+      "brand": "Lenovo",
+      "color": "Black",
+      "Description": "Lenovo Ideapad S145 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10)",
+      "dynamicprice": 6500
+    },
+    {
+      "id": 6,
+      "Productname": "Leather Jacket",
+      "type": "clothing",
+      "Price": 10000,
+      "photo": "https://images.unsplash.com/photo-1608236415053-3691791bbffe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGphY2tldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+      "brand": "levis",
+      "color": "brown",
+      "Description": "Well styled and warmth providing heavy brown jacket for men form a well brand levis",
+      "dynamicprice": 10000
+    },
+    {
+      "id": 7,
+      "Productname": "Kurti",
+      "type": "clothing",
+      "Price": 800,
+      "photo": "https://rukminim1.flixcart.com/image/452/542/k6l2vm80/ethnic-set/n/j/v/xxl-bkgreen-baba-kurti-original-imafpytuqxvjyebf.jpeg?q=50",
+      "brand": "Baba",
+      "color": "Green",
+      "Description": "Women Kurta and Dupatta Set Rayon",
+      "dynamicprice": 800
+    },
+    {
+      "id": 8,
+      "Productname": "Red Chief shirt",
+      "type": "clothing",
+      "Price": 1100,
+      "photo": "https://rukminim1.flixcart.com/image/452/542/k8et4sw0/shirt/y/t/k/xl-8120128-g00402-red-chief-original-imafqfpvt5yd9xhg.jpeg?q=50",
+      "brand": "Red chief",
+      "color": "Red-check",
+      "Description": "Men Regular Fit Checkered Spread Collar Casual Shirt",
+      "dynamicprice": 1100
+    },
+    {
+      "id": 9,
+      "Productname": "Jeans",
+      "type": "clothing",
+      "Price": 1700,
+      "photo": "https://rukminim1.flixcart.com/image/452/542/jydaqa80/jean/p/y/f/36-epsjean-lblu-urbano-fashion-original-imafgmhh7azrhj3u.jpeg?q=50",
+      "brand": "Urban",
+      "color": "Blue",
+      "Description": "Slim Men Light Blue Jeans",
+      "dynamicprice": 1700
+    },
+    {
+      "id": 10,
+      "Productname": "shirt",
+      "type": "clothing",
+      "Price": 700,
+      "photo": "https://rukminim1.flixcart.com/image/452/542/ki0loy80-0/fabric/z/w/t/no-unstitched-br1005-being-real-original-imafxwry9x46d7gf.jpeg?q=50",
+      "brand": "Being Real",
+      "color": "Black & Red",
+      "Description": "Men Regular Fit Color Block Cut Away Collar Casual Shirt",
+      "dynamicprice": 700
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
