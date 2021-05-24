@@ -222,6 +222,7 @@ export class CheckoutComponent implements OnInit {
 
 checkingout()
 {
+  this.totalPrice=0;
   console.log(this.finalProducts,"li")
   this.sendProducts=this.currentProductsData;
 
@@ -244,6 +245,7 @@ checkingout()
     {
       this.sendProducts[i].quantity=1;
     }
+  
     this.totalPrice=this.totalPrice+this.sendProducts[i].dynamicprice;
     this.isTotalVisible=true;
 

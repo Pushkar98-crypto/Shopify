@@ -88,8 +88,16 @@ export class ThankyouComponent implements OnInit {
 
   send()
   {
+    if(this.finalmessage.length>10)
+    {
      const ap:any=document.getElementById("id1")
        ap.click()
+
+    }
+    else
+    {
+      alert("NO data in cart")
+    }
   }
 
 

@@ -49,14 +49,10 @@
       "password": "push",
       "confirmPassword": "push",
       "verified": true,
-      "cart": [
-        3
-       
-      ],
+      "cart": [],
       "verificationCode": 88079,
       "id": 5
     }
-  
   ],
   "products": [
     {
