@@ -50,30 +50,13 @@
       "confirmPassword": "push",
       "verified": true,
       "cart": [
-        3,
-        5,
-        4
+        3
+       
       ],
       "verificationCode": 88079,
       "id": 5
-    },
-    {
-      "name": "random",
-      "message": 80041,
-      "email": "pushkar.12064@gnindia.dronacharya.info",
-      "phoneNumber": "9899999987",
-      "address": "A-419 D2  block",
-      "pincode": "121009",
-      "age": "99",
-      "nationality": "indian",
-      "username": "jo",
-      "password": "ker",
-      "confirmPassword": "ker",
-      "verified": false,
-      "cart": [],
-      "verificationCode": 80041,
-      "id": 6
     }
+  
   ],
   "products": [
     {
