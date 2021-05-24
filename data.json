@@ -49,9 +49,30 @@
       "password": "push",
       "confirmPassword": "push",
       "verified": true,
-      "cart": [],
+      "cart": [
+        3,
+        2,
+        1
+      ],
       "verificationCode": 88079,
       "id": 5
+    },
+    {
+      "name": "Atharav Yadav",
+      "message": 92775,
+      "email": "pushkaryadav.4998@gmail.com",
+      "phoneNumber": "7738279088",
+      "address": "A-419 D2  block",
+      "pincode": "121009",
+      "age": "22",
+      "nationality": "Indian",
+      "username": "Pufo",
+      "password": "coder",
+      "confirmPassword": "coder",
+      "verified": true,
+      "cart": [],
+      "verificationCode": 92775,
+      "id": 6
     }
   ],
   "products": [

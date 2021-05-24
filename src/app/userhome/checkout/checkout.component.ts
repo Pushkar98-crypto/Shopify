@@ -314,9 +314,16 @@ logout()
 buy()
 {
   
+  if(this.finalSendMessage.length>8)
+  {
+  
   this.sendservice.send.next(this.finalSendMessage);
   this.router.navigate(['thankyou/'+`${this.currentUser}`])
-
+  }
+  else
+  {
+    alert("You have nothing in your cart!!")
+  }
 }
  
 }
