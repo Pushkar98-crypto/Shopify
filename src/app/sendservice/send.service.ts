@@ -8,6 +8,6 @@ export class SendService {
 
   constructor() { }
 
-  send=new BehaviorSubject({});
-collect=<any>this.send.asObservable();
+send=new BehaviorSubject({});
+collect=this.send.asObservable();
 }

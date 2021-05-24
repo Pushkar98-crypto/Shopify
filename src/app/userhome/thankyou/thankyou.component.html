@@ -1,0 +1,87 @@
+
+<div class="nav d-flex" >
+
+    <div class="logo  d-flex">
+     
+    <img src="../../../assets/images/shopify.png" alt="Cart Image" >
+
+    <h3 style="margin-top:45px">Shopify</h3>
+    </div>
+   
+
+  
+  <div class="nav_links"  >
+    <ul>
+       <li class="item"><a href="#">Home</a></li>
+       <li class="item"><a> Services</a></li>
+       <li class="item"><a>About Us</a></li>
+       <li class="item"><a>Contact Us</a></li>
+
+     </ul>
+    </div>
+
+
+  
+   </div>
+
+   <div class="main_view" style="height:300px;">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+     <div class="Textarea container" >
+         <h1 style="font-weight:bold; font-family: Georgia, 'Times New Roman', Times, serif; position: relative; top:50%; left:50%;"> Thankyou For Shopping</h1>
+           <button type="button" class="snd" (click)="send()">send Data</button>
+        </div>
+   </div>
+   
+
+   <form  [formGroup]="mailForm" class="contact-form" [hidden]=true (ngSubmit)="sendEmail($event)">
+    <div class="form-control">
+   <textarea name="message" [(ngModel)]="finalmessage" [hidden]=true formControlName="message"></textarea>
+ </div>
+ <div class="form-control">
+   <input type="text" [hidden]=true [(ngModel)]="sendmail" name="email"  formControlName="email">
+ </div>
+   <input type="submit"  [hidden]=true id="id1" value="send">
+   </form> 
+
+
+   <div class="info_area" style="background-image:linear-gradient(lightslategray,white)">
+    <div class="container info_area_con d-flex justify-content-evenly">
+         
+          <ul class="info_list" style="list-style-type: none;">
+              <li><img  style ="width: 80px; height: 80px;" src="../../../assets/images/shopify.png"></li>
+              <li>2600 Rose Hill St # 100<br>
+                Boise, ID 83705</li>
+                <br>
+                <li>P: (208) 345-1386</li>
+                    <li>E: office@yourshpify.com</li>
+          </ul>
+          <br>
+
+        
+          <p class="info_area_txt ser">
+            <span style="color:rgb(70, 67, 66) ;font-weight: bold">Social Media </span><br>
+                    <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Twitter</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Facebook</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Instagram</a><br>
+                  <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;" >Snapchat</a><br>
+                  
+        </p>
+        <p class="info_area_txt lin">
+            <span style="font-weight: bold; color:rgb(70, 67, 66) ;">HELPFUL LINKS</span><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Home</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Contact us</a><br>
+            <a href="#" style="text-decoration: none; color:rgb(70, 67, 66) ;">Custome Review</a><br>
+            <a href="#"  style="text-decoration: none; color:rgb(70, 67, 66) ;">Our Blog</a><br>
+           
+            <br>
+
+            
+        </p>
+          
+        
+    </div>
+</div>

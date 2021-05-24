@@ -7,6 +7,7 @@ import { UserShoppingHomeComponent } from './userhome/user-shopping-home/user-sh
 import {ProductsComponent } from './userhome/products/products.component';
 import {CheckoutComponent } from './userhome/checkout/checkout.component'
 import { AuthguardGuard }  from './guard/authguard.guard'
+import { ThankyouComponent} from './userhome/thankyou/thankyou.component'
 
 
 const routes: Routes = [
@@ -29,6 +30,9 @@ const routes: Routes = [
  {
    path:'login/userhome/products/checkout/:id',component:CheckoutComponent,canActivate:[AuthguardGuard]
  },
+ {
+   path:'thankyou/:id',component:ThankyouComponent
+ }
  
  
 ];

@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
 import {FormGroup, FormBuilder, Validators }  from '@angular/forms';
+import { SendService } from '../../sendservice/send.service'
 
 
 
@@ -45,7 +46,7 @@ export class CheckoutComponent implements OnInit {
   
 
 
-  constructor( private http:HttpClient,private activatedRoute:ActivatedRoute,private formbuilder:FormBuilder,private router:Router) {
+  constructor( private sendservice:SendService, private http:HttpClient,private activatedRoute:ActivatedRoute,private formbuilder:FormBuilder,private router:Router) {
 
     this.unitForm=this.formbuilder.group({
 
@@ -289,7 +290,7 @@ console.log(this.mailForm.value.message,"line 282");
   //  ap.click()
 }
 public sendEmail(e:Event) {
-  this.mailForm.value.message=this.finalSendMessage;
+  
   console.log(e.target,"Line 119");
   e.preventDefault();
   
@@ -310,6 +311,9 @@ logout()
 
 buy()
 {
+  
+  this.sendservice.send.next(this.finalSendMessage);
+  this.router.navigate(['thankyou/'+`${this.currentUser}`])
 
 }
  

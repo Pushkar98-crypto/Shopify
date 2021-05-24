@@ -10,6 +10,7 @@ import { SortPipe } from '../apppipe/sort.pipe';
 import { CheckoutComponent } from './checkout/checkout.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 
 
@@ -23,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
     FilterPipe,
     SortPipe,
     CheckoutComponent,
+    ThankyouComponent,
     
    
   ],
