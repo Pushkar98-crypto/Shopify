@@ -70,7 +70,9 @@
       "password": "coder",
       "confirmPassword": "coder",
       "verified": true,
-      "cart": [],
+      "cart": [
+        3
+      ],
       "verificationCode": 92775,
       "id": 6
     }

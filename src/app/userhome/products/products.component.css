@@ -71,7 +71,7 @@
 
   .sidebar {
      text-align:center;
-     height:700px;
+     height:auto;
      background-color:#fc6b03;
      background-image:linear-gradient(white,lightslategrey,white)
 

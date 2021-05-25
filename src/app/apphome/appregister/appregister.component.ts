@@ -102,6 +102,10 @@ export class AppregisterComponent implements OnInit {
     return this.regForm.controls
   }
 
+  travelToLogin()
+  {
+    this.router.navigateByUrl('login');
+  }
   
 
 }
